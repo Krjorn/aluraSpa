@@ -1,0 +1,87 @@
+@use '../abstract/variables' as v;
+
+#servicos {
+    margin: 80px;
+    h4 {
+        text-align: center;
+        text-transform: uppercase;
+        @include v.tamanho-fonte(2.5);
+        margin: 1rem;
+        color: v.$secondary-color;
+    }
+    h3 {
+        text-align: center;
+        font-weight: 300;
+        @include v.tamanho-fonte(1.2);
+        margin-bottom: 80px;
+    }
+    .cards {
+        display: flex;
+        justify-content: space-evenly;
+        .card {
+            width: 360px;
+            text-align: center;
+            .img-container {
+                padding-bottom: 6px;
+                border-bottom: 3px solid v.$secondary-color;
+                img {
+                    max-width: 100%;
+                }
+            }
+            h5 {
+                margin: 25px 0 20px;
+                @include v.tamanho-fonte(1.5);
+                font-weight: 300;
+            }
+            p {
+                @include v.tamanho-fonte(3);
+                line-height: 1.2rem;
+                color: v.$primary-color;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+    #servicos {
+        .cards {
+            gap: 2rem;
+            .card {
+                h5 {
+                    @include v.tamanho-fonte(1.8);
+                }
+                p {
+                    @include v.tamanho-fonte(3.5);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #servicos {
+        margin: 10%;
+        h3 {
+            @include v.tamanho-fonte(1.8);
+        }
+        .cards {
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+            .card{
+                width: 100%;
+                .img-container {
+                    img {
+                        min-width: 100%;
+                    }
+                }
+                h5 {
+                    @include v.tamanho-fonte(1.8);
+                }
+                p {
+                    @include v.tamanho-fonte(3.5);
+                }
+            }
+        }
+    }
+}

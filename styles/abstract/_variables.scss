@@ -1,0 +1,21 @@
+// Fonts
+
+$font: 'Roboto', sans-serif;
+
+// Font Size
+
+$text-size: 3rem;
+
+@mixin tamanho-fonte($num) {
+    font-size: calc($text-size/$num);
+}
+
+// @include v.tamanho-fonte();
+
+// Colors
+
+$bg-color: #FEFADC;
+$primary-color: #1E2749;
+$secondary-color: #800E13;
+$tertiary-color: #DCCEDE;
+$quaternary-color: #A985AD;

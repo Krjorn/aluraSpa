@@ -1,0 +1,37 @@
+@use '../abstract/variables' as v;
+
+nav {
+    text-align: center;
+    ul {
+        li {
+            display: inline-block;
+            padding: 1rem;
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: v.$primary-color;
+                transition: .2s linear;
+                &:hover {
+                    @include v.tamanho-fonte(2.7);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        ul {
+            li {
+                padding: 1rem .5rem;
+                a {
+                    @include v.tamanho-fonte(3.5);
+                    &:hover {
+                        @include v.tamanho-fonte(3.5);
+                    }
+                }
+            }
+        }
+    }
+}

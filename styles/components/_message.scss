@@ -1,0 +1,50 @@
+@use '../abstract/variables' as v;
+
+#message {
+    margin: 100px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    img {
+        width: 400px;
+    }
+    .text{
+        width: 400px;
+        h3 {
+            @include v.tamanho-fonte(2);
+            font-weight: bold;
+        }
+        h4 {
+            @include v.tamanho-fonte(2.5);
+            padding: 1.5rem 0 1rem;
+            color: v.$secondary-color;
+        }
+        p {
+            color: v.$primary-color;
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #message {
+        margin: 100px 50px;
+        flex-direction: column;
+        text-align: center;
+        img {
+            width: 70%;
+        }
+        .text {
+            width: 100%;
+            h3 {
+                @include v.tamanho-fonte(2.4);
+            }
+            h4 {
+                @include v.tamanho-fonte(2.6);
+            }
+            p {
+                @include v.tamanho-fonte(3.5);
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@use '../abstract/_variables.scss' as v
+
+@mixin footer-bg($deg, $colors...)
+    background: linear-gradient($deg, $colors)
+
+footer
+    text-align: center
+    @include v.tamanho-fonte(2.8)
+    margin-top: 1rem
+    padding: 1.2rem
+    color: v.$secondary-color
+    @include footer-bg(180deg, v.$bg-color, v.$quaternary-color)
+    i
+        color: red
+
+@media screen and (max-width: 900px)
+    footer
+        @include v.tamanho-fonte(3.5)
